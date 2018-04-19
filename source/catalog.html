@@ -2,67 +2,70 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Catalog</title>
+  <meta charset="utf-8">
+  <title>Мишка
+  </title>
 </head>
 
 <body>
   <header class="header">
     <div class="header__logo">
-      <a href="index.html"><img src="http://placehold.it/150x100"></a>
+      <a class="header__logo-link" href="index.html">
+        <img src="http://placehold.it/150x100" alt="Логотип" class="header__logo-img">
+      </a>
     </div>
-    <button class="main-nav__toggle" type="button"></button>
+    <button class="main-nav__toggle" type="button">Меню</button>
     <nav class="main-nav">
       <ul class="main-nav__items">
         <li class="main-nav__item">
-          <a href="catalog.html">Каталог товаров</a>
+          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item">
-          <a href="order.html">Вязание на заказ</a>
+          <a class="main-nav__link" href="order.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__item  main-nav__item-search">
-          <a href="#">Поиск по сайту</a>
+        <li class="main-nav__item  main-nav__item--search">
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
         </li>
-        <li class="main-nav__item  main-nav__item-basket">
-          <a href="#">Корзина: пока пуста</a>
+        <li class="main-nav__item  main-nav__item--basket">
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
-    <h2 class="header__title">Каталог товаров</h2>
+    <h1 class="header__title">Каталог товаров</h1>
   </header>
 
   <section class="catalog">
+    <h2 class="visually-hidden">Каталог товаров</h2>
     <article class="catalog__item">
-      <img src="http://placehold.it/150x100">
+      <img src="http://placehold.it/150x100" class="catalog__img" alt="Превью">
       <div class="catalog__item-info">
-        <h3 class="catalog__item-title">Зайчик-попрыгай</h3>
+        <h2 class="catalog__item-title">Зайчик-попрыгайчик</h2>
         <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
         <p class="catalog__item-price">
           <b class="catalog__item-cost">1 200 руб.</b>
-          <a class="catalog__item-basket"></a>
+          <a class="catalog__item-basket" href="#">В корзину</a>
         </p>
       </div>
     </article>
     <article class="catalog__item">
-      <img src="http://placehold.it/150x100">
+      <img src="http://placehold.it/150x100" class="catalog__img" alt="Превью">
       <div class="catalog__item-info">
-        <h3 class="catalog__item-title">Корзина для белья</h3>
+        <h2 class="catalog__item-title">Корзина для белья</h2>
         <p class="catalog__item-desc">Диаметр 15 см, высота 10 см</p>
         <p class="catalog__item-price">
           <b class="catalog__item-cost">690 руб.</b>
-          <a class="catalog__item-basket"></a>
+          <a class="catalog__item-basket" href="#">В корзину</a>
         </p>
       </div>
     </article>
     <article class="catalog__item">
-      <img src="http://placehold.it/150x100">
+      <img src="http://placehold.it/150x100" class="catalog__img" alt="Превью">
       <div class="catalog__item-info">
-        <h3 class="catalog__item-title">Большая корзина для игрушек</h3>
+        <h2 class="catalog__item-title">Большая корзина для игрушек</h2>
         <p class="catalog__item-desc">Диаметр 30 см, высота 30 см</p>
         <p class="catalog__item-price">
           <b class="catalog__item-cost">1 500 руб.</b>
-          <a class="catalog__item-basket"></a>
+          <a class="catalog__item-basket" href="#">В корзину</a>
         </p>
       </div>
     </article>
@@ -73,7 +76,7 @@
     <div class="video__video">
       <iframe src="#"></iframe>
     </div>
-    <p class="video__decr">
+    <p class="video__description">
       По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
     </p>
     <a class="btn" href="#">Сделать заказ</a>
@@ -81,9 +84,9 @@
 
   <footer class="footer">
     <div class="footer__social">
-      <a class="footer__social-link social-link__inst" href="https://www.instagram.com/"></a>
-      <a class="footer__social-link social-link__fb" href="https://www.facebook.com/"></a>
-      <a class="footer__social-link social-link__tw" href="https://www.tweeter.com/"></a>
+      <a class="footer__social-link social-link__instagram" href="https://www.instagram.com/">Instagram</a>
+      <a class="footer__social-link social-link__facebook" href="https://www.facebook.com/">Facebook</a>
+      <a class="footer__social-link social-link__twitter" href="https://www.tweeter.com/">Twitter</a>
     </div>
     <div class="footer__copyright">
       Разработано
