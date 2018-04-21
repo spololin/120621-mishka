@@ -1,0 +1,34 @@
+.header-nav {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.header-nav__items {
+  list-style: none;
+}
+
+.header-nav__search {
+  font-weight: inherit;
+  border: none;
+
+  &::placeholder {
+    color: black;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.header-nav__link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
