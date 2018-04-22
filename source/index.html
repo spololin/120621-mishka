@@ -76,21 +76,21 @@
   </section>
 
   <section class="about-us">
-    <h2 class="about-us-title">Коротко о нас:</h2>
-    <ul class="about-us-list">
-      <li class="about-us__list-item  about-us__list-item-eko">Экологически чистые материалы</li>
-      <li class="about-us__list-item  about-us__list-item-style">Скандинавский стиль по российской цене</li>
-      <li class="about-us__list-item  about-us__list-item-liks">Увеличивает лайки на фотографиях</li>
-      <li class="about-us__list-item  about-us__list-item-ball">Связано вручную с любовью и уважением</li>
-      <li class="about-us__list-item  about-us__list-item-rocket">Поддержка отечественного производителя</li>
-      <li class="about-us__list-item  about-us__list-item-box">Поставляется в подарочной упаковке</li>
+    <h2 class="about-us__title">Коротко о нас:</h2>
+    <ul class="about-us__list">
+      <li class="about-us__list-item  about-us__list-item--eko">Экологически чистые материалы</li>
+      <li class="about-us__list-item  about-us__list-item--style">Скандинавский стиль по российской цене</li>
+      <li class="about-us__list-item  about-us__list-item--liks">Увеличивает лайки на фотографиях</li>
+      <li class="about-us__list-item  about-us__list-item--ball">Связано вручную с любовью и уважением</li>
+      <li class="about-us__list-item  about-us__list-item--rocket">Поддержка отечественного производителя</li>
+      <li class="about-us__list-item  about-us__list-item--box">Поставляется в подарочной упаковке</li>
     </ul>
   </section>
 
   <section class="reviews">
     <h2 class="reviews__title">Отзывы</h2>
     <blockquote class="reviews__item">
-      <p class="review_description">
+      <p class="review__description">
         Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии,
         я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
       </p>
@@ -109,10 +109,16 @@
 
   <section class="contacts">
     <h2 class="contacts__title">Контакты</h2>
-    <p class="contacts__mail">e-mail:</p>
-    <a class="contacts__link" href="#">info@mimimishkashop.ru</a>
-    <p class="contacts__address">адрес:</p>
-    <p class="contacts__address-exact">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+    <p class="contacts__email contacts__text">
+      <span>e-mail:</span>
+      <span>
+        <a class="contacts__link" href="#">info@mimimishkashop.ru</a>
+      </span>
+    </p>
+    <p class="contacts__address contacts__text">
+      <span>адрес:</span>
+      <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
+    </p>
     <div class="contacts__map">
       <img src="http://placehold.it/150x100" alt="Наше месторасположение" class="contacts__map-adress">
     </div>
@@ -138,17 +144,17 @@
       <ul class="modal__list">
         <li class="modal__item">
           <label class="modal__label">
-            <input class="modal__input" type="radio" name="size" value="">S
+            <input class="modal__input visually-hidden" type="radio" name="size" value="">S
           </label>
         </li>
         <li class="modal__item">
           <label class="modal__label">
-            <input class="modal__input" type="radio" name="size" value="">M
+            <input class="modal__input visually-hidden" type="radio" name="size" value="">M
           </label>
         </li>
         <li class="modal__item">
           <label class="modal__label">
-            <input class="modal__input" type="radio" name="size" value="">L
+            <input class="modal__input visually-hidden" type="radio" name="size" value="">L
           </label>
         </li>
       </ul>
