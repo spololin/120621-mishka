@@ -1,77 +1,77 @@
 .order__description {
-    font-size: 13px;
-    line-height: 24px;
-    color: @color-grey;
+  font-size: 13px;
+  line-height: 24px;
+  color: @color-grey;
 }
 
 .order__form {
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
 }
 
 .form__fieldset {
-    border: none;
+  border: none;
 }
 
 .form__fieldset-title {
-    font-size: 17px;
-    line-height: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: @color-green-light;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @color-green-light;
 }
 
 .form__item-label {
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
 }
 
 .form__item-text {
+  border: none;
+  box-shadow: inset 0 -2px 0 0 black;
+  color: @color-grey;
+  font-size: 19px;
+  line-height: 18px;
+
+  &::placeholder {
+    color: fade(@color-grey, 30%);
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 0 @color-green-light;
+
+    &::placeholder{
+      color: fade(@color-grey, 30%);
+    }
+  }
+
+  &:focus{
     border: none;
-    box-shadow: inset 0 -2px 0 0 black;
-    color: @color-grey;
-    font-size: 19px;
-    line-height: 18px;
-
-    &::placeholder {
-        color: fade(@color-grey, 30%);
-    }
-
-    &:hover {
-      box-shadow: inset 0 -2px 0 0 @color-green-light;
-
-      &::placeholder{
-        color: fade(@color-grey, 30%);
-      }
-    }
-
-    &:focus{
-      border: none;
-      box-shadow: inset 0 -2px 0 0 @color-green-light;
-    }
+    box-shadow: inset 0 -2px 0 0 @color-green-light;
+  }
 }
 
 .form__item-textarea {
-    border: 2px solid @color-grey;
-    color: @color-grey;
-    font-size: 19px;
-    line-height: 18px;
+  border: 2px solid @color-grey;
+  color: @color-grey;
+  font-size: 19px;
+  line-height: 18px;
 
+  &::placeholder {
+      color: fade(@color-grey, 30%);
+  }
+  &:hover {
+    border-color: @color-green-light;
     &::placeholder {
-        color: fade(@color-grey, 30%);
+      color: fade(@color-grey, 30%);
     }
-    &:hover {
-        border-color: @color-green-light;
-        &::placeholder {
-            color: fade(@color-grey, 30%);
-        }
-    }
+  }
 }
 
 .order__note {
-    font-size: 14px;
-    line-height: 16px;
-    color: @color-grey;
+  font-size: 14px;
+  line-height: 16px;
+  color: @color-grey;
 }
