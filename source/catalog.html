@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Мишка
-  </title>
+  <title>Мишка</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,19 +15,21 @@
       </a>
     </div>
     <button class="main-nav__toggle" type="button">Меню</button>
-    <nav class="main-nav">
-      <ul class="main-nav__items">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+    <nav class="header-nav">
+      <ul class="header-nav__items">
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="order.html">Вязание на заказ</a>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="order.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__item  main-nav__item--search">
-          <a class="main-nav__link" href="#">Поиск по сайту</a>
+        <li class="header-nav__item  header-nav__item-search">
+          <form class="header-nav__form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="header-nav__search" type="search" name="search" placeholder="Поиск по сайту">
+          </form>
         </li>
-        <li class="main-nav__item  main-nav__item--basket">
-          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+        <li class="header-nav__item  header-nav__item-basket">
+          <a class="header-nav__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -40,7 +42,7 @@
       <img src="http://placehold.it/150x100" class="catalog__img" alt="Превью">
       <div class="catalog__item-info">
         <h2 class="catalog__item-title">Зайчик-попрыгайчик</h2>
-        <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
+        <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
         <p class="catalog__item-price">
           <b class="catalog__item-cost">1 200 руб.</b>
           <a class="catalog__item-basket" href="#">В корзину</a>
@@ -51,7 +53,7 @@
       <img src="http://placehold.it/150x100" class="catalog__img" alt="Превью">
       <div class="catalog__item-info">
         <h2 class="catalog__item-title">Корзина для белья</h2>
-        <p class="catalog__item-desc">Диаметр 15 см, высота 10 см</p>
+        <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
         <p class="catalog__item-price">
           <b class="catalog__item-cost">690 руб.</b>
           <a class="catalog__item-basket" href="#">В корзину</a>
@@ -62,7 +64,7 @@
       <img src="http://placehold.it/150x100" class="catalog__img" alt="Превью">
       <div class="catalog__item-info">
         <h2 class="catalog__item-title">Большая корзина для игрушек</h2>
-        <p class="catalog__item-desc">Диаметр 30 см, высота 30 см</p>
+        <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
         <p class="catalog__item-price">
           <b class="catalog__item-cost">1 500 руб.</b>
           <a class="catalog__item-basket" href="#">В корзину</a>
@@ -73,9 +75,8 @@
 
   <section class="video">
     <h3 class="video__title">Процесс производства</h3>
-    <div class="video__video">
-      <iframe src="#"></iframe>
-    </div>
+    <img class="video__picture" src="http://placehold.it/150x100" width="150" height="100" alt="Превью видео">
+    <img class="video__play" src="http://placehold.it/150x100" width="150" height="100" alt="Иконка play">
     <p class="video__description">
       По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
     </p>
@@ -93,6 +94,31 @@
       <a class="footer__copyright-link" href="https://htmlacademy.ru/">HTML Academy</a>
     </div>
   </footer>
+
+  <section class="modal">
+    <h2 class="modal__title">Добавить в корзину</h2>
+    <p class="modal__text">Выберите размер:</p>
+    <form action="https://echo.htmlacademy.ru" method="post" class="modal__form">
+      <ul class="modal__list">
+        <li class="modal__item">
+          <label class="modal__label">
+            <input class="modal__input visually-hidden" type="radio" name="size" value="">S
+          </label>
+        </li>
+        <li class="modal__item">
+          <label class="modal__label">
+            <input class="modal__input visually-hidden" type="radio" name="size" value="">M
+          </label>
+        </li>
+        <li class="modal__item">
+          <label class="modal__label">
+            <input class="modal__input visually-hidden" type="radio" name="size" value="">L
+          </label>
+        </li>
+      </ul>
+      <button class="btn modal__button" type="submit">Добавить</button>
+    </form>
+  </section>
 </body>
 
 </html>
