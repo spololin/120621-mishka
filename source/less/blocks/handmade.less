@@ -1,8 +1,13 @@
+.handmade {
+  margin: 0 auto;
+  width: 320px;
+}
+
 .handmade__wrapper {
-  //значения высоты и ширины (по размеру картинки) временны для отображения фона
-  width: 575px;
-  height: 373px;
+  min-height: 356px;
   background-image: url("/img/hero-mobile@1x.jpg");
+  background-color: @color-grey-light;
+  background-position: top center;
 }
 
 .handmade__title {
@@ -10,14 +15,26 @@
   line-height: 30px;
   font-weight: bold;
   text-align: center;
+  margin: auto;
+  width: 250px;
 }
 
-.handmade__item {
+.handmade__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.handmade__items a {
+  display: block;
   font-size: 19px;
   font-weight: bold;
   line-height: 24px;
   color: white;
+  padding: 20px;
+}
 
+.handmade__item {
   &--interior {
     background-color: @color-green-light;
 
@@ -44,3 +61,70 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .handmade {
+    width: 768px;
+    //margin: 0 auto;
+    //padding: 0 50px;
+  }
+
+  .handmade__title {
+    font-size: 43px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    width: 520px;
+    padding-top: 120px;
+  }
+
+  .handmade__wrapper {
+    background-size: cover;
+    min-height: 620px;
+  }
+
+  .handmade__items {
+    display: flex;
+    justify-content: space-between;
+    margin: -65px 50px 0 50px;
+  }
+
+  .handmade__item {
+    flex-grow: 1;
+
+    a {
+      font-size: 20px;
+      line-height: 30px;
+      padding-right: 160px;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .handmade {
+    width: 1250px;
+    //padding: 0 100px;
+  }
+
+  .handmade__wrapper {
+    background-size: contain;
+    min-height: 745px;
+  }
+
+  .handmade__title {
+    font-size: 53px;
+    line-height: 57px;
+    width: 700px;
+  }
+
+  .handmade__items {
+    margin: -65px 100px 0 100px;
+  }
+
+  .handmade__item {
+    a {
+      padding-right: 320px;
+    }
+  }
+}
+

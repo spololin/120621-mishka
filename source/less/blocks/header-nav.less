@@ -6,22 +6,40 @@
 
 .header-nav__items {
   list-style: none;
-}
+  margin: 0 auto 0 45px;
+  padding: 0;
+  width: 260px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
 
-.header-nav__search {
-  font-weight: inherit;
-  border: none;
-
-  &::placeholder {
-    color: black;
+  .header-nav__item:nth-child(3) {
+    display: none;
   }
 
-  &:focus {
-    &::placeholder {
-      color: transparent;
-    }
+  .header-nav__item:nth-child(4) {
+    display: none;
   }
 }
+
+.header-nav__item {
+  padding-right: 45px;
+}
+
+// .header-nav__search {
+//   font-weight: inherit;
+//   border: none;
+
+//   &::placeholder {
+//     color: black;
+//   }
+
+//   &:focus {
+//     &::placeholder {
+//       color: transparent;
+//     }
+//   }
+// }
 
 .header-nav__link {
   &:hover {
@@ -30,5 +48,105 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-nav__item {
+    min-width: 168px;
+  }
+
+  .header-nav__items {
+    display: flex;
+    margin-left: 0;
+    width: 668px;
+    font-size: 15px;
+
+    .header-nav__item:nth-child(4) {
+      display: none;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+      font-size: 17px;
+      flex-wrap: wrap;
+      width: 350px;
+      margin: 0;
+      margin-left: auto;
+      margin-top: -50px;
+
+      .header-nav__item {
+        padding-right: 0;
+      }
+
+      .header-nav__item:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+
+  .header-nav__item-delivery {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: @color-grey;
+  }
+}
+
+@media (min-width: 1250px) {
+  .header-nav__items--index {
+    margin: 0;
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    order: 1;
+
+    .header-nav__item {
+      font-size: 17px;
+
+      &:nth-child(3) {
+        display: block;
+        font-size: 15px;
+      }
+
+      &:nth-child(4) {
+        display: block;
+        font-size: 15px;
+      }
+    }
+
+    &:last-child {
+      margin: 0;
+      order: 3;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .header-nav__items--no-index {
+    margin: 0;
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    order: 1;
+
+    .header-nav__item {
+      font-size: 17px;
+
+      &:nth-child(3) {
+        display: block;
+        font-size: 15px;
+      }
+
+      &:nth-child(4) {
+        display: block;
+        font-size: 15px;
+      }
+    }
+
+    &:last-child {
+      margin: 0;
+      order: 3;
+    }
   }
 }
