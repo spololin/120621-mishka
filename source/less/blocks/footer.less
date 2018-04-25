@@ -3,12 +3,8 @@
   width: auto;
   margin: 0 auto;
   //padding: 0 30px;
-}
-
-.footer-wrapper {
   width: 260px;
   margin: 0 auto;
-  padding: 0 30px;
 }
 
 .footer__logo {
@@ -42,10 +38,9 @@
     display: block;
   }
 
-  .footer-wrapper {
+  .footer {
     width: 668px;
     padding: 0 50px;
-    //margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
@@ -57,8 +52,14 @@
 }
 
 @media (min-width: 1250px) {
-  .footer-wrapper {
+  .footer--index {
     width: 1050px;
     padding: 0 100px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .footer--no-index {
+    width: 1050px;
   }
 }
