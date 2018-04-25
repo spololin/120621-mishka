@@ -22,27 +22,19 @@
   margin-top: 30px;
 }
 
-.order__form fieldset {
-  margin-bottom: 50px;
-}
-
-.order__form legend {
-  margin: 15px 0;
-}
-
-.form__item-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.order__form {
+.form__item-label {
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
+  width: 200px;
 }
 
 .form__fieldset {
   border: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .form__fieldset-title {
@@ -53,10 +45,21 @@
   color: @color-green-light;
 }
 
-.form__item-label {
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: bold;
+.form__item-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--name {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+  }
+}
+
+.btn__form-send {
+  font: inherit;
+  line-height: 16px;
+  margin: 0 auto;
 }
 
 .form__item-text {
@@ -108,4 +111,116 @@
   line-height: 16px;
   font-weight: 400;
   color: @color-grey;
+}
+
+@media (min-width: 768px) {
+  .order {
+    width: 668px;
+    padding: 0 50px;
+  }
+
+  .form__item-wrapper {
+    width: 501px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+
+    &--check {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .form__item-label {
+        width: 210px;
+      }
+    }
+
+    &--radio {
+      .form__item-label {
+        width: 350px;
+      }
+    }
+  }
+
+  .form__item-label {
+    font-size: 19px;
+  }
+
+  .form__fieldset-title {
+    width: 150px;
+    margin-left: 50px;
+    position: absolute;
+  }
+
+  .form__fieldset {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    &--check {
+      background-color: #f1f1f1;
+    }
+
+    &--phone {
+      background-color: #f1f1f1;
+
+      .form__item-text {
+        margin-left: 0px;
+      }
+    }
+
+    &--email {
+      background-color: #f1f1f1;
+
+      .form__item-text {
+        margin-left: 0px;
+      }
+    }
+
+    .form__item-textarea {
+      width: 501px;
+    }
+  }
+
+  .form__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .btn__form-send  {
+    margin-left: 75px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .order {
+    width: 1050px;
+  }
+
+  .form__item-label {
+    font-size: 17px;
+  }
+
+  .form__fieldset-title {
+    margin-left: 115px;
+  }
+
+  .form__item-wrapper {
+    width: 700px;
+    margin-left: 175px;
+
+    .form__item-textarea {
+      width: auto;
+      margin-left: 0px;
+    }
+  }
+
+  .form__bottom {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .order__description {
+    margin-left: 175px;
+  }
 }
