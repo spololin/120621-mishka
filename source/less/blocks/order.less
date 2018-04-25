@@ -1,7 +1,38 @@
+.order {
+  width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.order-title {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  padding: 75px 0;
+  background-color: @color-grey-light;
+  margin-bottom: 30px;
+}
+
 .order__description {
   font-size: 13px;
   line-height: 24px;
   color: @color-grey;
+  margin-top: 30px;
+}
+
+.order__form fieldset {
+  margin-bottom: 50px;
+}
+
+.order__form legend {
+  margin: 15px 0;
+}
+
+.form__item-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .order__form {
@@ -75,5 +106,6 @@
 .order__note {
   font-size: 14px;
   line-height: 16px;
+  font-weight: 400;
   color: @color-grey;
 }
