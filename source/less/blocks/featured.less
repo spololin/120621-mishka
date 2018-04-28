@@ -1,9 +1,15 @@
 .featured {
   color: @color-grey;
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .featured__title {
   color: black;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 0;
 }
 
 .featured__label {
@@ -11,6 +17,8 @@
   line-height: 20px;
   font-weight: bold;
   color: @color-green-light;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 .featured__description {
@@ -21,7 +29,7 @@
   line-height: 20px;
 }
 
-.featured__image {
+.featured-wrapper__intro img {
   background-color: @color-grey-light;
 }
 
@@ -29,4 +37,103 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .featured {
+    padding: 40px 50px 0;
+    width: 668px;
+  }
+
+  .featured__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin: 0;
+  }
+
+  .featured-wrapper__title-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .featured__description {
+    font-size: 17px;
+  }
+
+  .featured-wrapper__intro img {
+    width: 333px;
+    min-height: 404px;
+  }
+
+  .featured__buy {
+    width: 292px;
+    margin-top: -75px;
+  }
+
+  .featured__cost {
+    font-size: 20px;
+  }
+
+  .featured__label {
+    margin: 0 0 6px 0;
+    line-height: 17px;
+    width: 110px;
+    text-align: center;
+  }
+
+  .featured-wrapper__intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .featured-wrapper__intro-description {
+    display: flex;
+    flex-direction: column;
+    width: 292px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .featured {
+    padding: 0 100px;
+    width: 1050px;
+  }
+
+  .featured-wrapper__title-label {
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-left: 47px;
+    margin-left: 60px;
+    margin-top: 130px;
+    z-index: 2;
+  }
+
+  .featured__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .featured__label {
+    line-height: 17px;
+  }
+
+  .featured-wrapper__intro {
+    width: 875px;
+    margin-left: auto;
+    margin-top: -100px;
+    align-items: flex-end;
+  }
+
+  .featured-wrapper__intro img {
+    width: 525px;
+    min-height: 636px;
+  }
+
+  .featured-wrapper__intro-description {
+    margin-bottom: 220px;
+  }
 }

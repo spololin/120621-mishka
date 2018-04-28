@@ -1,23 +1,142 @@
+.contacts {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .contacts__title {
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
+  margin-left: 30px;
 }
 
-.contacts__text {
+.contacts__items {
+  list-style: none;
+  margin: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts__item {
   color: @color-grey;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 30px;
-}
 
-.contacts__link {
-  border-bottom: 1px solid @color-green-light;
+  &--email {
+    margin-left: 32px;
+    border-bottom: 1px solid @color-green-light;
 
-  &:hover {
-    color: @color-green-light;
+    &:hover {
+      color: @color-green-light;
+    }
+
+    &:active {
+      color: rgba(99, 209, 187, 0.3);
+      border-bottom: 1px solid rgba(99, 209, 187, 0.3);
+    }
   }
 
-  &:active {
-    color: rgba(99, 209, 187, 0.3);
-    border-bottom: 1px solid rgba(99, 209, 187, 0.3);
+  &--address {
+    width: 170px;
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    width: 768px;
+    margin-top: 150px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-left: 50px;
+  }
+
+  .contacts__items {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .contacts__item {
+    margin-left: 20px;
+
+    &--address {
+      width: 235px;
+    }
+
+    &--info-email {
+      margin-left: 0;
+    }
+
+    &--info-address {
+      margin-left: 100px;
+    }
+  }
+
+  .contacts__map-address {
+    width: 768px;
+    height: 457px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .contacts {
+    width: 1050px;
+    margin: 200px auto 0 auto;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-left: 175px;
+  }
+
+  .contacts__wrapper {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-top: -150px;
+  }
+
+  .contacts__items {
+    width: 300px;
+    margin-bottom: 100px;
+    margin-right: 0;
+    margin-left: 175px;
+  }
+
+  .contacts__item {
+    margin: 0;
+
+    &--address {
+      width: 220px;
+      margin-left: 20px;
+    }
+
+    &--email {
+      margin-left: 20px;
+      margin-right: 30px;
+    }
+  }
+
+  .contacts__map-address {
+    width: 525px;
+    height: 457px;
+  }
+
+  .contacts-btn {
+    margin: 0;
+    margin-top: -100px;
+    margin-left: 175px;
   }
 }
