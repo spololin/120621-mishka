@@ -2,6 +2,7 @@
   width: 260px;
   margin: 0 auto;
   padding: 0 30px;
+  margin-bottom: 45px;
 }
 
 .reviews__title {
@@ -28,8 +29,19 @@
 }
 
 .reviews__button-wrapper {
-  margin-bottom: 38px;
-  margin-top: 32px;
+  margin: 32px 0 38px;
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  font-size: 0;
+
+  .reviews__btn {
+    flex-basis: 50%;
+    cursor: pointer;
+    background: 0 0;
+    outline: 0;
+    border: 1px solid #ececec;
+  }
 }
 
 @media (min-width: 768px) {

@@ -5,9 +5,7 @@
 
 .handmade__wrapper {
   min-height: 356px;
-  background-image: url("/img/hero-mobile@1x.jpg");
-  background-color: @color-grey-light;
-  background-position: top center;
+  background: @color-green-light url("/img/hero-mobile@1x.jpg") no-repeat 50% top;
 }
 
 .handmade__title {
@@ -16,6 +14,7 @@
   font-weight: bold;
   text-align: center;
   margin: auto;
+  padding-top: 87px;
   width: 250px;
 }
 
@@ -31,10 +30,34 @@
   font-weight: bold;
   line-height: 24px;
   color: white;
-  padding: 20px;
+  padding: 40px 30px;
+  max-width: 130px;
 }
 
 .handmade__item {
+  position: relative;
+
+  .icon {
+    // right: 20px;
+    // top: 27px;
+  }
+
+  .icon-interior {
+    width: 41px;
+    height: 63px;
+    right: 25px;
+    top: 22px;
+    fill: #3bb09d;
+  }
+
+  .icon-toy {
+    width: 60px;
+    height: 60px;
+    right: 15px;
+    top: 22px;
+    fill: #35a999;
+  }
+
   &--interior {
     background-color: @color-green-light;
 
