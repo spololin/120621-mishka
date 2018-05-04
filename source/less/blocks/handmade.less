@@ -15,73 +15,72 @@
   font-weight: bold;
   text-align: center;
   margin: auto;
-  padding-top: 87px;
+  padding-top: 72px;
   width: 250px;
+  letter-spacing: 1.1px;
 }
 
 .handmade__items {
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.handmade__items a {
-  display: block;
-  font-size: 19px;
-  font-weight: bold;
-  line-height: 24px;
-  color: white;
-  padding: 30px 30px 40px;
-  max-width: 130px;
-}
-
-.handmade__item {
-  position: relative;
-
-  .icon {
-    // right: 20px;
-    // top: 27px;
-  }
-
-  .icon-interior {
-    width: 41px;
-    height: 63px;
-    right: 25px;
-    top: 30px;
-    fill: #3bb09d;
-  }
-
-  .icon-toy {
-    width: 60px;
-    height: 60px;
-    right: 15px;
-    top: 35px;
-    fill: #35a999;
-  }
-
-  &--interior {
-    background-color: @color-green-light;
-
-    &:hover {
-      background-color: @change-color-interior;
+  margin: -75px 0 0;
+  
+  .handmade__item {
+    position: relative;
+  
+    .icon {
+      fill: #3bb09d;
+    }
+  
+    .icon-interior {
+      width: 41px;
+      height: 63px;
+      right: 35px;
+      top: 22px;
+    }
+  
+    .icon-toy {
+      width: 60px;
+      height: 60px;
+      right: 25px;
+      top: 20px;
+      fill: #35a999;
+    }
+  
+    &--interior {
+      background-color: @color-green-light;
+  
+      &:hover {
+        background-color: @change-color-interior;
+      }
+  
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+        background-color: @change-color-interior;
+      }
+    }
+  
+    &--toy {
+      background-color: @color-green;
+  
+      &:hover {
+        background-color: @change-color-toy;
+      }
+  
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+        background-color: @change-color-toy;
+      }
     }
 
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      background-color: @change-color-interior;
-    }
-  }
-
-  &--toy {
-    background-color: @color-green;
-
-    &:hover {
-      background-color: @change-color-toy;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      background-color: @change-color-toy;
+    a {
+      display: block;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 24px;
+      color: white;
+      padding: 25px 30px 30px;
+      max-width: 130px;
     }
   }
 }
