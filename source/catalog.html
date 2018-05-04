@@ -9,16 +9,16 @@
 </head>
 
 <body>
-  <header class="header header--no-index">
-    <button class="header-nav__toggle" type="button">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="19.958px" height="14px" viewBox="0 0 19.958 14" enable-background="new 0 0 19.958 14" xml:space="preserve">
-        <rect fill="#231F20" width="19.958" height="2" />
-        <rect y="6" fill="#231F20" width="19.958" height="2" />
-        <rect y="12" fill="#231F20" width="19.958" height="2" />
-      </svg>
-    </button>
-    <nav class="header-nav">
+  <header class="header header--index">
+    <nav class="header-nav header-nav--close">
+      <button class="header-nav__toggle" type="button">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="19.958px" height="14px" viewBox="0 0 19.958 14" enable-background="new 0 0 19.958 14" xml:space="preserve">
+          <rect fill="#231F20" width="19.958" height="2" />
+          <rect y="6" fill="#231F20" width="19.958" height="2" />
+          <rect y="12" fill="#231F20" width="19.958" height="2" />
+        </svg>
+      </button>
       <div class="header__logo">
         <a class="header__logo-link" href="index.html">
           <svg class="header__logo-img" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -45,7 +45,7 @@
           </svg>
         </a>
       </div>
-      <ul class="header-nav__items header-nav__items--no-index header-nav__items--links">
+      <ul class="header-nav__items header-nav__items--index header-nav__items--links">
         <li class="header-nav__item">
           <a href="catalog.html">Каталог товаров</a>
         </li>
@@ -117,11 +117,11 @@
         <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" class="catalog__img" alt="Превью">
         <div class="catalog__item-wrapper">
           <div class="catalog__item-info">
-            <h2 class="catalog__item-title">Корзина для белья</h2>
+            <h2 class="catalog__item-title">Корзинка для белья</h2>
             <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
           </div>
           <p class="catalog__item-price">
-            <b class="catalog__item-cost">1 200 руб.</b>
+            <b class="catalog__item-cost">690 руб.</b>
             <a class="catalog__item-bascket" href="#">
               В корзину
               <svg class="icon icon-bascket" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -138,11 +138,11 @@
         <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" class="catalog__img" alt="Превью">
         <div class="catalog__item-wrapper">
           <div class="catalog__item-info">
-            <h2 class="catalog__item-title">Большая корзина для игрушек</h2>
+            <h2 class="catalog__item-title">Большая корзинка для игрушек</h2>
             <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
           </div>
           <p class="catalog__item-price">
-            <b class="catalog__item-cost">1 200 руб.</b>
+            <b class="catalog__item-cost">1 500 руб.</b>
             <a class="catalog__item-bascket" href="#">
               В корзину
               <svg class="icon icon-bascket" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -198,7 +198,7 @@
     <a class="btn btn-video" href="#">Сделать заказ</a>
   </section>
 
-  <section class="modal">
+  <section class="modal visually-hidden">
     <h2 class="modal__title">Добавить в корзину</h2>
     <p class="modal__text">Выберите размер:</p>
     <form action="https://echo.htmlacademy.ru" method="post" class="modal__form">
