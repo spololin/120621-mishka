@@ -124,7 +124,7 @@
 @media (min-width: 1250px) {
   .contacts {
     width: 1050px;
-    margin: 135px auto 80px auto;
+    margin: 0 auto 85px;
   }
 
   .contacts__title {
@@ -133,7 +133,7 @@
     margin-left: 175px;
     margin-top: 120px;
 
-    svg {
+    .icon-flag {
       left: -110px;
       top: -10px;
     }
@@ -151,29 +151,32 @@
   .contacts__items {
     width: 300px;
     margin: 150px 0 150px 175px;
-  }
 
-  .contacts__item {
-    margin: 0;
-
-    &--address {
-      width: 220px;
-      margin-left: 30px;
-    }
-
-    &--email {
-      margin: 0 30px 30px;
+    .contacts__item {
+      margin: 0;
+  
+      &--address {
+        width: 222px;
+        margin-left: 23px;
+      }
+  
+      &--email {
+        margin: 0 0 30px 23px;
+        // margin-right: ;
+      }
     }
   }
 
   .contacts__wrapper img {
     width: 525px;
     height: 457px;
+    position: relative;
+    top: -20px;
   }
 
   .contacts-btn {
     margin: auto;
-    margin-top: -75px;
+    margin-top: -70px;
     margin-left: 175px;
   }
 }
