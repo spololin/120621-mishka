@@ -45,6 +45,14 @@
     border: 1px solid #ececec;
     flex-basis: 50%;
   }
+
+  svg:hover {
+    fill: fade(@color-black, 60%);
+  }
+
+  svg:active {
+    fill: fade(@color-black, 30%);
+  }
 }
 
 @media @width-tablet {
@@ -153,10 +161,6 @@
 
     .reviews__button-wrapper {
       margin-top: 20px;
-
-      .reviews__btn--pages {
-        margin-right: 20;
-      }
     }
   }
 

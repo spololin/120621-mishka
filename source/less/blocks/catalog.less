@@ -25,6 +25,14 @@
 
 .catalog__item {
   margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+  }
 }
 
 .catalog__item-title {
@@ -34,6 +42,14 @@
   font-weight: bold;
   margin: 28px 28px 0;
   letter-spacing: 1px;
+
+  &:hover {
+    color: fade(@color-black, 60%);
+  }
+
+  &:active {
+    color: fade(@color-black, 30%);
+  }
 }
 
 .catalog__item-description {
@@ -58,6 +74,14 @@
 .catalog__item-bascket {
   font-size: 0;
   margin-right: 20px;
+
+  .icon-bascket:hover {
+    fill: @color-green-light;
+  }
+
+  .icon-bascket:active {
+    fill: fade(@color-green-light, 30%);
+  }
 }
 
 .catalog__item-cost {
@@ -156,6 +180,10 @@
     .catalog__item-price {
       padding-top: 20px;
       margin-left: 25px;
+    }
+
+    .catalog__item-wrapper {
+      margin-top: -3px;
     }
   }
 

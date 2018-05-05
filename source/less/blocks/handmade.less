@@ -54,7 +54,6 @@
       }
 
       &:active {
-        color: rgba(255, 255, 255, 0.3);
         background-color: @change-color-interior;
       }
     }
@@ -67,7 +66,6 @@
       }
 
       &:active {
-        color: rgba(255, 255, 255, 0.3);
         background-color: @change-color-toy;
       }
     }
@@ -80,6 +78,10 @@
       color: white;
       padding: 25px 30px 30px;
       max-width: 130px;
+
+      &:active {
+        color: fade(@color-white, 30%);
+      }
     }
   }
 }

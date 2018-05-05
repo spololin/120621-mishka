@@ -23,6 +23,14 @@
     vertical-align: middle;
     margin-right: 35px;
     font-size: 0;
+
+    &:hover {
+      fill: @change-color-toy;
+    }
+
+    &:active {
+      fill: fade(@change-color-toy, 30%);
+    }
   }
 
   a:nth-child(3) {
@@ -54,6 +62,14 @@
   svg {
     margin-left: 30px;
     fill: @color-green-light;
+
+    &:hover {
+      fill: @change-color-toy;
+    }
+
+    &:active {
+      fill: fade(@change-color-toy, 30%)l
+    }
   }
 }
 
@@ -66,6 +82,14 @@
 
     .footer__logo {
       display: block;
+
+      &:hover {
+        fill: @change-color-toy;
+      }
+
+      &:active {
+        fill: fade(@change-color-toy, 30%);
+      }
     }
 
     .footer__social {

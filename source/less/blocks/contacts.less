@@ -42,6 +42,18 @@
         color: rgba(99, 209, 187, 0.3);
         border-bottom: 1px solid rgba(99, 209, 187, 0.3);
       }
+
+      & a {
+        color: @color-grey;
+
+        &:hover {
+          color: @change-color-toy;
+        }
+
+        &:active {
+          color: fade(@change-color-toy, 30%);
+        }
+      }
     }
 
     &--address {
