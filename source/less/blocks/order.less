@@ -1,7 +1,6 @@
 .order {
   width: 320px;
-  margin: 0 auto;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
 }
 
 .order-title {
@@ -9,17 +8,15 @@
   line-height: 30px;
   font-weight: bold;
   text-align: center;
-  margin: auto;
+  margin: auto auto 25px;
   padding: 72px 0;
   letter-spacing: 1px;
   background-color: @color-grey-light;
-  margin-bottom: 25px;
 }
 
 .order__form {
-  margin-bottom: 55px;
   width: 260px;
-  margin: 0 auto;
+  margin: 0 auto 55px;
 }
 
 .order__description {
@@ -27,9 +24,7 @@
   line-height: 24px;
   color: @color-grey;
   width: 260px;
-  margin-top: 30px;
-  margin: 0 auto;
-  margin-bottom: 25px;
+  margin: 25px auto;
   letter-spacing: 0.9px;
 }
 
@@ -93,22 +88,23 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding: 0;
-}
+  margin: 0;
 
-.form__fieldset--radio {
-  margin-bottom: 15px;
-}
+  &--radio {
+    margin-bottom: 15px;
+  }
 
-.form__fieldset--check {
-  margin-bottom: 18px;
-}
+  &--check {
+    margin-bottom: 18px;
+  }
 
-.form__fieldset--email {
-  margin-bottom: 8px;
-}
+  &--email {
+    margin-bottom: 8px;
+  }
 
-.form__fieldset--phone {
-  margin-top: 8px;
+  &--phone {
+    margin-top: 8px;
+  }
 }
 
 .form__fieldset-title {
@@ -186,7 +182,7 @@
   font-size: 19px;
   line-height: 18px;
   border-bottom: 2px solid black;
-  padding: 15px 35px 11px 0;
+  padding: 15px 19px 11px 0;
   margin-bottom: 25px;
 
   &::placeholder {
@@ -235,12 +231,12 @@
   .order {
     width: 768px;
     margin-bottom: 30px;
-    // padding: 0 50px;
   }
 
   .order__form {
-    width: 768px;
+    width: auto;
     margin-left: 0;
+    margin-bottom: 30px;
   }
 
   .order-title {
@@ -272,7 +268,9 @@
 
       .form__item-label {
         width: 182px;
+        padding-right: 2px;
         margin-bottom: 35px;
+        padding-left: 80px;
       }
     }
 
@@ -302,7 +300,6 @@
     display: flex;
 
     label {
-      //line-height:  65px;
       padding-right:  30px;
     }
 
@@ -317,11 +314,6 @@
   .form__item-label {
     font-size: 19px;
     padding-left: 80px;
-
-    &::before {
-      width: 48px;
-      height: 48px;
-    }
   }
 
   .form__fieldset-title {
@@ -364,6 +356,7 @@
       .form__item-text {
         margin-left: 0;
         background-color: #f1f1f1;
+        width: 480px;
       }
 
       .form__fieldset-title {
@@ -384,6 +377,7 @@
       .form__item-text {
         margin-left: 0;
         background-color: #f1f1f1;
+        width: 480px;
       }
     }
 
@@ -394,7 +388,6 @@
   }
 
   .form__bottom {
-    // margin-bottom: 55px;
     margin: 45px 50px 0;
     display: flex;
     justify-content: space-between;
@@ -414,6 +407,19 @@
 
   .btn__form-send {
     margin-left: 0;
+  }
+
+  .form__item-radio + label::before, 
+  .form__item-checkbox + label::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  .form__item-radio:checked + label::after {
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    left: 13px;
   }
 }
 
@@ -444,8 +450,6 @@
   }
 
   .form__fieldset {
-    //margin-top: 50px;
-
     .form__item-wrapper {
       width: 700px;
       margin-left: 225px;
@@ -462,7 +466,6 @@
 
       &--check {
         margin-top: 20px;
-        // margin-bottom: 85px;
         padding-bottom: 0;
 
         .form__item-label {
@@ -476,20 +479,30 @@
       padding-top: 30px;
     }
 
-    &--phone {
-      // margin-top: 15px;
-    }
-
     .form__item-wrapper--check {
       width: 900px;
     }
+
+    &--email {
+      .form__item-text {
+        width: 680px;
+      }
+    }
+
+    &--phone {
+      .form__item-text {
+        width: 680px;
+      }
+    }
   }
 
-
+  .form__item-wrapper--box {
+    .form__item-text {
+      margin-right: 0;
+    } 
+  }
 
   .form__bottom {
-    // width: 700px;
-    // margin: 0 auto;
     margin: 40px 225px 0;
   }
 
