@@ -10,7 +10,7 @@
 
 <body>
   <header class="header header--index">
-    <nav class="header-nav header-nav--close">
+    <nav class="header-nav header-nav--close header-nav--nojs">
       <button class="header-nav__toggle" type="button">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="19.958px" height="14px" viewBox="0 0 19.958 14" enable-background="new 0 0 19.958 14" xml:space="preserve">
@@ -91,7 +91,8 @@
 
   <section class="handmade">
     <div class="handmade__wrapper">
-      <h2 class="handmade__title">Милые штуки ручной<br> работы для дома</h2>
+      <h2 class="handmade__title">Милые штуки ручной
+        <br> работы для дома</h2>
     </div>
     <ul class="handmade__items">
       <li class="handmade__item handmade__item--interior">
@@ -316,19 +317,16 @@
     </div>
   </section>
 
-  <section class="modal visually-hidden">
+  <section class="modal">
     <h2 class="modal__title">Добавить в корзину</h2>
     <p class="modal__text">Выберите размер:</p>
     <form action="https://echo.htmlacademy.ru" method="post" class="modal__form">
-      <label class="modal__label">
-        <input class="visually-hidden" type="radio" name="size" value="">S
-      </label>
-      <label class="modal__label">
-        <input class="visually-hidden" type="radio" name="size" value="">M
-      </label>
-      <label class="modal__label">
-        <input class="visually-hidden" type="radio" name="size" value="">L
-      </label>
+      <input class="form__input" type="radio" name="size" value="">
+      <label class="modal__label">S</label>
+      <input class="form__input" type="radio" name="size" value="">
+      <label class="modal__label">M</label>
+      <input class="form__input" type="radio" name="size" value="">
+      <label class="modal__label">L</label>
       <button class="btn modal__button" type="submit">Добавить</button>
     </form>
   </section>
