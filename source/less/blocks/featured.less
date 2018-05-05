@@ -91,7 +91,11 @@
     width: 290px;
   }
 
-  .featured-wrapper__intro  {
+  .featured-wrapper__intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     img {
       width: 333px;
       min-height: 404px;
@@ -118,12 +122,6 @@
     line-height: 17px;
     width: 110px;
     text-align: center;
-  }
-
-  .featured-wrapper__intro {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .featured-wrapper__intro-description {
@@ -187,7 +185,7 @@
 
   .featured__buy {
     position: relative;
-    }
+  }
 
   .featured__cost {
     font-size: 21px;
