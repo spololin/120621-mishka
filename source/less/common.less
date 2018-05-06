@@ -7,7 +7,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: @color-black;
 }
 
 .btn {
@@ -19,6 +19,9 @@ a {
   text-align: center;
   display: block;
   margin: 0 auto;
+  width: 260px;
+  padding: 14px 0;
+  letter-spacing: 2px;
 
   &:hover {
     background-color: @color-grey;
@@ -41,4 +44,9 @@ a {
   white-space: nowrap;
   clip-path: inset(100%);
   overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  position: absolute;
 }

@@ -5,9 +5,8 @@
 
 .handmade__wrapper {
   min-height: 356px;
-  background-image: url("/img/hero-mobile@1x.jpg");
-  background-color: @color-grey-light;
-  background-position: top center;
+  background: #f9f9f9 url("/img/hero-mobile@1x.jpg") no-repeat 50% 50%;
+  background-size: cover;
 }
 
 .handmade__title {
@@ -16,53 +15,78 @@
   font-weight: bold;
   text-align: center;
   margin: auto;
+  padding-top: 72px;
   width: 250px;
+  letter-spacing: 1.1px;
 }
 
 .handmade__items {
   list-style: none;
   padding: 0;
-  margin: 0;
-}
+  margin: -75px 0 0;
 
-.handmade__items a {
-  display: block;
-  font-size: 19px;
-  font-weight: bold;
-  line-height: 24px;
-  color: white;
-  padding: 20px;
-}
+  .handmade__item {
+    position: relative;
 
-.handmade__item {
-  &--interior {
-    background-color: @color-green-light;
-
-    &:hover {
-      background-color: @change-color-interior;
+    .icon {
+      fill: #3bb09d;
     }
 
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      background-color: @change-color-interior;
+    .icon-interior {
+      width: 41px;
+      height: 63px;
+      right: 35px;
+      top: 22px;
+    }
+
+    .icon-toy {
+      width: 60px;
+      height: 60px;
+      right: 25px;
+      top: 20px;
+    }
+
+    &--interior {
+      background-color: @color-green-light;
+
+      &:hover {
+        background-color: @change-color-interior;
+      }
+
+      &:active {
+        background-color: @change-color-interior;
+      }
+    }
+
+    &--toy {
+      background-color: @color-green;
+
+      &:hover {
+        background-color: @change-color-toy;
+      }
+
+      &:active {
+        background-color: @change-color-toy;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 24px;
+      color: white;
+      padding: 25px 30px 30px;
+      max-width: 130px;
+
+      &:active {
+        color: fade(@color-white, 30%);
+      }
     }
   }
-
-  &--toy {
-    background-color: @color-green;
-
-    &:hover {
-      background-color: @change-color-toy;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-      background-color: @change-color-toy;
-    }
-  }
 }
 
-@media (min-width: 768px) {
+@media @width-tablet {
   .handmade {
     width: 768px;
   }
@@ -73,32 +97,42 @@
     text-align: center;
     margin: 0 auto;
     width: 520px;
-    padding-top: 120px;
+    padding-top: 150px;
   }
 
   .handmade__wrapper {
     background-size: cover;
-    min-height: 620px;
+    min-height: 740px;
   }
 
   .handmade__items {
     display: flex;
     justify-content: space-between;
-    margin: -65px 50px 0 50px;
-  }
+    margin: -115px 50px 0;
 
-  .handmade__item {
-    flex-grow: 1;
+    .handmade__item {
+      flex-grow: 1;
 
-    a {
-      font-size: 20px;
-      line-height: 30px;
-      padding-right: 160px;
+      a {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 30px 160px 25px 35px;
+        letter-spacing: 1.2px;
+      }
+
+      .icon-interior {
+        top: 27px;
+      }
+
+      .icon-toy {
+        top: 32px;
+        right: 35px;
+      }
     }
   }
 }
 
-@media (min-width: 1250px) {
+@media @width-desktop {
   .handmade {
     width: 1250px;
   }
@@ -115,7 +149,7 @@
   }
 
   .handmade__items {
-    margin: -65px 100px 0 100px;
+    margin: -120px 100px 0 100px;
   }
 
   .handmade__item {

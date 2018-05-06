@@ -2,6 +2,9 @@
   text-align: center;
   width: 320px;
   margin: 0 auto;
+  border: 1px solid #c6c6c6;
+  padding-top: 30px;
+  box-sizing: border-box;
 }
 
 .modal__title {
@@ -23,10 +26,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  .form__input {
+    display: none;
+  }
+
   label {
     width: 82px;
+    box-sizing: border-box;
     font-size: 17px;
     line-height: 16px;
+    padding: 16px 0;
     font-weight: bold;
     color: @color-grey;
     cursor: pointer;
@@ -40,6 +49,10 @@
       border: 2px solid @color-green-light;
     }
   }
+
+  .form__input:checked + label {
+    border-color: @color-green-light;
+  }
 }
 
 .modal__button {
@@ -48,12 +61,28 @@
   border: 2px solid @color-green-light;
   font-size: 17px;
   line-height: 16px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+
+  &:hover {
+    background-color: @color-green-light;
+    color: @color-white;
+    cursor: pointer;
+  }
 }
 
-@media (min-width: 768px) {
+@media @width-tablet {
   .modal {
     width: 566px;
     min-height: 336px;
+  }
+
+  .modal__form {
+    width: 350px;
+
+    label {
+      width: 112px;
+    }
   }
 
   .modal__title {
@@ -65,5 +94,9 @@
 
   .modal__text {
     font-size: 17px;
+  }
+
+  .modal__button {
+    width: 350px;
   }
 }

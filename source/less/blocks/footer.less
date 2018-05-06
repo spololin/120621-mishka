@@ -1,16 +1,41 @@
 .footer {
   background-color: @color-grey-light;
   margin: 0 auto;
-  width: 260px;
-}
+  width: 320px;
 
-.footer__logo {
-  display: none;
+  .footer__logo {
+    display: none;
+  }
 }
 
 .footer__social {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 28px 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  .footer__social-links {
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 35px;
+    font-size: 0;
+
+    &:hover {
+      fill: @change-color-toy;
+    }
+
+    &:active {
+      fill: fade(@change-color-toy, 30%);
+    }
+  }
+
+  a:nth-child(3) {
+    margin-right: 0;
+  }
 }
 
 .footer__copyright {
@@ -25,38 +50,87 @@
 
   span {
     font-size: 19px;
-    line-height: 18px;
+    line-height: 34px;
     font-weight: bold;
+    vertical-align: top;
+  }
+
+  a {
+    padding: 20px 0 30px;
+  }
+
+  svg {
+    margin-left: 30px;
+    fill: @color-green-light;
+
+    &:hover {
+      fill: @change-color-toy;
+    }
+
+    &:active {
+      fill: fade(@change-color-toy, 30%);
+    }
   }
 }
 
-@media (min-width: 768px) {
-  .footer__logo {
-    display: block;
-  }
-
+@media @width-tablet {
   .footer {
     width: 668px;
-    padding: 0 50px;
     display: flex;
     justify-content: space-between;
-  }
+    padding: 60px 50px 55px 50px;
 
-  .footer__copyright {
-    margin: 0;
-    width: 160px;
+    .footer__logo {
+      display: block;
+
+      &:hover {
+        fill: @change-color-toy;
+      }
+
+      &:active {
+        fill: fade(@change-color-toy, 30%);
+      }
+    }
+
+    .footer__social {
+      padding: 0;
+      padding-left: 90px;
+      border: 0;
+    }
+
+    .footer__copyright {
+      margin: 0;
+      width: 183px;
+
+      a {
+        padding: 0;
+      }
+
+      svg {
+        margin-left: 30px;
+      }
+    }
   }
 }
 
-@media (min-width: 1250px) {
+@media @width-desktop {
   .footer--index {
     width: 1050px;
-    padding: 0 100px;
+    padding: 55px 100px;
+
+    .footer__social {
+      margin-left: 0;
+    }
   }
 }
 
-@media (min-width: 1150px) {
+@media @width-desktop-no-index {
   .footer--no-index {
     width: 1050px;
+    padding: 55px 50px;
+
+    .footer__social {
+      margin-left: 0;
+    }
   }
 }
