@@ -1,6 +1,6 @@
 .reviews {
   width: 260px;
-  margin: 0 auto 50px;
+  margin: 0 auto 40px;
   padding: 0 30px;
 }
 
@@ -60,7 +60,7 @@
     position: relative;
     width: 668px;
     padding: 80px 50px 0;
-    margin-bottom: 90px;
+    margin-bottom: 0px;
 
     &::before {
       content: "";
@@ -73,6 +73,10 @@
       z-index: -1;
       background-image: url("../../img/review@1x.jpg");
       background-color: #f4f4f4;
+
+      @media @desktop-retina {
+        background-image: url("../../img/review@2x.jpg");
+      }
     }
   }
 
@@ -130,7 +134,7 @@
   .reviews {
     width: 1050px;
     padding: 0 100px;
-    margin-bottom: 140px;
+    margin-bottom: 125px;
 
     &::before {
       left: 100px;
