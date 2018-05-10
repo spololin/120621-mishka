@@ -5,6 +5,17 @@
   border: 1px solid #c6c6c6;
   padding-top: 30px;
   box-sizing: border-box;
+  display: none;
+  z-index: 1000;
+  background-color: @color-white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__show {
+  display: block;
 }
 
 .modal__title {
@@ -45,13 +56,13 @@
       border: 2px solid rgba(68, 68, 68, 0.3);
     }
 
-    &:checked {
-      border: 2px solid @color-green-light;
-    }
+    // &:active {
+    //   border: 2px solid @color-green-light;
+    // }
   }
 
-  .form__input:checked + label {
-    border-color: @color-green-light;
+  .form__input:checked + .modal__label {
+    border: 2px solid @color-green-light;
   }
 }
 
@@ -99,4 +110,19 @@
   .modal__button {
     width: 350px;
   }
+}
+
+.modal-overlay {
+  position: fixed;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-overlay__show {
+  display: block;
 }

@@ -5,10 +5,10 @@
 
 .handmade__wrapper {
   min-height: 356px;
-  background: #f9f9f9 url("/img/hero-mobile@1x.jpg") no-repeat 50% 50%;
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat 50% 50%;
 
   @media @desktop-retina {
-    background-image: url("/img/hero-mobile@2x.jpg");
+    background-image: url("../img/hero-mobile@2x.jpg");
     background-size: 320px auto;
   }
 }
@@ -21,7 +21,6 @@
   margin: auto;
   padding-top: 72px;
   width: 250px;
-  letter-spacing: 1.1px;
 }
 
 .handmade__items {
@@ -80,7 +79,7 @@
       font-weight: bold;
       line-height: 24px;
       color: white;
-      padding: 25px 30px 30px;
+      padding: 25px 160px 30px 30px;
       max-width: 130px;
 
       &:active {
@@ -106,11 +105,11 @@
   }
 
   .handmade__wrapper {
-    background: #f9f9f9 url("/img/hero-tablet@1x.jpg") no-repeat 50% 50%;
+    background: #f9f9f9 url("../img/hero-tablet@1x.jpg") no-repeat 50% 50%;
     min-height: 740px;
 
     @media @desktop-retina {
-      background-image: url("/img/hero-tablet@2x.jpg");
+      background-image: url("../img/hero-tablet@2x.jpg");
       background-size: 768px auto;
     }
   }
@@ -127,7 +126,7 @@
       left: 0;
       width: 100%;
       height: 34px;
-      background: url("/img/bg-zigzag-fill.svg") repeat-x 0 0;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0;
     }
 
     .handmade__item {
@@ -136,8 +135,7 @@
       a {
         font-size: 20px;
         line-height: 30px;
-        padding: 30px 160px 45px 35px;
-        letter-spacing: 1.2px;
+        padding: 30px 170px 45px 35px;
       }
 
       .icon-interior {
@@ -158,11 +156,11 @@
   }
 
   .handmade__wrapper {
-    background: #f9f9f9 url("/img/hero-desktop@1x.jpg") no-repeat 50% 50%;
+    background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat 50% 50%;
     background-size: cover;
 
     @media @desktop-retina {
-      background: #f9f9f9 url("/img/hero-desktop@2ч.jpg") no-repeat 50% 50%;
+      background: #f9f9f9 url("../img/hero-desktop@2x.jpg") no-repeat 50% 50%;
       background-size: 1150px auto;
     }
   }
@@ -175,11 +173,11 @@
 
   .handmade__items {
     margin: -120px 100px 0 100px;
-  }
 
-  .handmade__item {
-    a {
-      padding-right: 320px;
+    .handmade__item {
+      a {
+        padding-right: 360px;
+      }
     }
   }
 }

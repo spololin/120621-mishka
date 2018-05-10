@@ -82,6 +82,10 @@
   .header-nav__item {
     position: relative;
 
+    &:hover .icon {
+      fill: @color-green-light;
+    }
+
     a {
       display: block;
       padding: 27px 0 27px 85px;
@@ -98,7 +102,7 @@
       .icon {
         top: 30px;
         left: 26px;
-        fill: #63d1bb;
+        fill: @color-green-light;
       }
 
       .icon-search {
@@ -181,7 +185,6 @@
     .header-nav__items--links {
       position: absolute;
       top: 86px;
-      letter-spacing: 0.6px;
       z-index: 2;
       order: 2;
     }
@@ -201,16 +204,14 @@
       }
 
       .header-nav__item--cart a {
-        width: 180px;
+        width: 182px;
         padding: 33px 0;
-        padding-left: 85px;
-        letter-spacing: 0.53px;
+        padding-left: 83px;
       }
 
       .header-nav__item--delivery {
         position: absolute;
         top: 86px;
-        letter-spacing: 0.2px;
         z-index: 2;
 
         a {
