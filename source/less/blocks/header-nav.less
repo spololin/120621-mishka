@@ -129,10 +129,7 @@
     border-top: 1px solid #ececec;
   }
 
-  .header-nav__item:nth-child(3) {
-    display: none;
-  }
-
+  .header-nav__item:nth-child(3),
   .header-nav__item:nth-child(4) {
     display: none;
   }
@@ -328,7 +325,8 @@
     .header-nav__item {
       font-size: 17px;
 
-      &:nth-child(3) {
+      &:nth-child(3),
+      &:nth-child(4) {
         display: block;
         font-size: 15px;
         position: absolute;
@@ -340,15 +338,7 @@
       }
 
       &:nth-child(4) {
-        display: block;
-        font-size: 15px;
-        position: absolute;
-        top: 88px;
         left: 220px;
-
-        a {
-          padding: 20px 0;
-        }
       }
 
       a {

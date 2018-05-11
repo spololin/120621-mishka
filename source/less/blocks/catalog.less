@@ -18,10 +18,6 @@
   background-color: @color-grey-light;
 }
 
-.catalog__img {
-  background-color: rgb(236, 236, 236);
-}
-
 .catalog__item {
   margin-bottom: 30px;
 
@@ -31,6 +27,10 @@
 
   &:active {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    background-color: rgb(236, 236, 236);
   }
 }
 
@@ -67,18 +67,18 @@
   border-top: 1px solid #ececec;
   padding-top: 25px;
   margin: 0 28px 25px;
-}
 
-.catalog__item-bascket {
-  font-size: 0;
-  margin-right: 20px;
-
-  .icon-bascket:hover {
-    fill: @color-green-light;
-  }
-
-  .icon-bascket:active {
-    fill: fade(@color-green-light, 30%);
+  a {
+    font-size: 0;
+    margin-right: 20px;
+  
+    .icon-bascket:hover {
+      fill: @color-green-light;
+    }
+  
+    .icon-bascket:active {
+      fill: fade(@color-green-light, 30%);
+    }
   }
 }
 
