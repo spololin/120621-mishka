@@ -27,64 +27,75 @@
   list-style: none;
   padding: 0;
   margin: -75px 0 0;
+}
 
-  .handmade__item {
-    position: relative;
+.handmade__item {
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
 
     .icon {
-      fill: #3bb09d;
+      fill: fade(#3bb09d, 70%);
+    }
+  }
+
+  &:active {
+    .icon {
+      fill: fade(#3bb09d, 30%);
+    }
+  }
+
+  .icon {
+    fill: #3bb09d;
+  }
+
+  .icon-interior {
+    width: 41px;
+    height: 63px;
+    right: 35px;
+    top: 22px;
+  }
+
+  .icon-toy {
+    width: 60px;
+    height: 60px;
+    right: 25px;
+    top: 20px;
+  }
+
+  &:first-child {
+    background-color: @color-green-light;
+
+    &:hover {
+      background-color: @change-color-interior;
+    }
+  }
+
+  &:last-child {
+    background-color: @color-green;
+
+    &:hover {
+      background-color: @change-color-toy;
     }
 
-    .icon-interior {
-      width: 41px;
-      height: 63px;
-      right: 35px;
-      top: 22px;
+    &:active {
+      background-color: @change-color-toy;
     }
+  }
 
-    .icon-toy {
-      width: 60px;
-      height: 60px;
-      right: 25px;
-      top: 20px;
-    }
+  a {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 24px;
+    color: white;
+    padding: 25px 160px 30px 30px;
+    max-width: 130px;
+    text-decoration: none;
 
-    &:first-child {
-      background-color: @color-green-light;
-
-      &:hover {
-        background-color: @change-color-interior;
-      }
-
-      &:active {
-        background-color: @change-color-interior;
-      }
-    }
-
-    &:last-child {
-      background-color: @color-green;
-
-      &:hover {
-        background-color: @change-color-toy;
-      }
-
-      &:active {
-        background-color: @change-color-toy;
-      }
-    }
-
-    a {
-      display: block;
-      font-size: 19px;
-      font-weight: bold;
-      line-height: 24px;
-      color: white;
-      padding: 25px 160px 30px 30px;
-      max-width: 130px;
-
-      &:active {
-        color: fade(@color-white, 30%);
-      }
+    &:active {
+      color: fade(@color-white, 30%);
     }
   }
 }
@@ -128,24 +139,24 @@
       height: 34px;
       background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0;
     }
+  }
 
-    .handmade__item {
-      flex-grow: 1;
+  .handmade__item {
+    flex-grow: 1;
 
-      a {
-        font-size: 20px;
-        line-height: 30px;
-        padding: 30px 170px 45px 35px;
-      }
+    a {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 30px 170px 45px 35px;
+    }
 
-      .icon-interior {
-        top: 27px;
-      }
+    .icon-interior {
+      top: 27px;
+    }
 
-      .icon-toy {
-        top: 32px;
-        right: 35px;
-      }
+    .icon-toy {
+      top: 32px;
+      right: 35px;
     }
   }
 }
@@ -173,11 +184,11 @@
 
   .handmade__items {
     margin: -115px 100px 0 100px;
+  }
 
-    .handmade__item {
-      a {
-        padding-right: 360px;
-      }
+  .handmade__item {
+    a {
+      padding-right: 360px;
     }
   }
 }

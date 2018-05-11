@@ -28,14 +28,14 @@
       height: 35px;
       width: 86px;
     }
+  }
 
-    &:hover {
-      opacity: 0.6;
-    }
+  .header__logo-link[href]:hover {
+    opacity: 0.6;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  .header__logo-link[href]:active {
+    opacity: 0.3;
   }
 }
 
@@ -86,36 +86,34 @@
       fill: @color-green-light;
     }
 
+    &:active .icon {
+      fill: fade(@color-green-light, 30%);
+    }
+
     a {
       display: block;
       padding: 27px 0 27px 85px;
       border-bottom: 1px solid #ececec;
+      text-decoration: none;
+      color: @color-black;
 
-      &:hover {
+      &[href]:hover {
         opacity: 0.6;
       }
 
-      &:active {
+      &[href]:active {
         opacity: 0.3;
       }
 
       .icon {
         top: 30px;
         left: 26px;
-        fill: @color-green-light;
+        fill: #d8d7d7;
       }
 
       .icon-search {
         width: 18px;
         height: 18px;
-
-        &:hover {
-          fill: @color-green-light;
-        }
-
-        &:active {
-          fill: fade(@color-green-light, 30%);
-        }
       }
 
       .icon-bascket {
@@ -210,8 +208,9 @@
         position: absolute;
         top: 86px;
         z-index: 2;
+        margin: 18px 0 18px 119px;
 
-        a {
+        span {
           width: 350px;
           text-align: end;
           font-size: 15px;

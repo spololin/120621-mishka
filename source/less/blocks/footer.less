@@ -2,14 +2,14 @@
   background-color: @color-grey-light;
   margin: 0 auto;
   width: 320px;
+}
 
-  .footer__logo {
-    display: none;
-  }
+.footer__logo {
+  display: none;
+}
 
-  .footer__links {
-    text-align: center;
-  }
+.footer__links {
+  text-align: center;
 }
 
 .footer__social {
@@ -31,14 +31,7 @@
     vertical-align: middle;
     margin-right: 35px;
     font-size: 0;
-
-    // &:hover {
-    //   fill: @change-color-toy;
-    // }
-
-    // &:active {
-    //   fill: fade(@change-color-toy, 30%);
-    // }
+    text-decoration: none;
   }
 
   a:nth-child(3) {
@@ -61,23 +54,25 @@
     line-height: 34px;
     font-weight: bold;
     vertical-align: top;
+    color: @color-black;
   }
 
   a {
+    position: relative;
     padding: 20px 0 30px;
+    text-decoration: none;
+
+    &:hover svg {
+      fill: @change-color-toy;
+    }
   }
 
   svg {
+    position: absolute;
+    top: 15px;
+    right: -62px;
     margin-left: 30px;
     fill: @color-green-light;
-
-    &:hover {
-      fill: @change-color-toy;
-    }
-
-    &:active {
-      fill: fade(@change-color-toy, 30%);
-    }
   }
 }
 
@@ -87,38 +82,43 @@
     display: flex;
     justify-content: space-between;
     padding: 60px 50px 55px 50px;
+  }
 
-    .footer__logo {
-      display: block;
-      width: 102px;
-      height: 34px;
+  .footer__logo {
+    display: block;
+    width: 102px;
+    height: 34px;
 
-      &:hover {
-        fill: @change-color-toy;
-      }
-
-      &:active {
-        fill: fade(@change-color-toy, 30%);
-      }
+    &:hover {
+      fill: @change-color-toy;
     }
 
-    .footer__social {
+    &:active {
+      fill: fade(@change-color-toy, 30%);
+    }
+  }
+
+  .footer__social {
+    padding: 0;
+    padding-left: 80px;
+    border: 0;
+  }
+
+  .footer__links {
+    margin-top: 5px;
+  }
+
+  .footer__copyright {
+    margin: 0;
+    width: 183px;
+
+    a {
       padding: 0;
-      padding-left: 80px;
-      border: 0;
     }
 
-    .footer__copyright {
-      margin: 0;
-      width: 183px;
-
-      a {
-        padding: 0;
-      }
-
-      svg {
-        margin-left: 20px;
-      }
+    svg {
+      margin-left: 20px;
+      top: -5px;
     }
   }
 }
