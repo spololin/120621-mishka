@@ -3,6 +3,18 @@
   margin: 0 auto 57px;
   border: 1px solid #ececec;
 
+  a {
+    color: #444444;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 190px;
+    letter-spacing: -1px;
+  }
+
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
@@ -18,7 +30,6 @@
   width: 170px;
   position: relative;
   margin: 20px 0 25px auto;
-  letter-spacing: 1px;
 
   .icon-camera {
     position: absolute;
@@ -32,16 +43,27 @@
 
 .video_box {
   position: relative;
+  min-width: 260px;
+  min-height: 153px;
+}
 
-  .video_play {
-    font-size: 0;
-    position: absolute;
-    top: 35px;
-    left: 75px;
-    border: 0;
-    background: 0 0;
-    outline: 0;
-    cursor: pointer;
+.video_play {
+  font-size: 0;
+  position: absolute;
+  top: 35px;
+  left: 75px;
+  border: 0;
+  background: 0 0;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2, 1.2);
+  }
+
+  &:active {
+    transform: scale(0.8, 0.8);
   }
 }
 
@@ -55,19 +77,7 @@
   line-height: 24px;
   width: 200px;
   margin: 25px 0 25px 35px;
-  letter-spacing: 0.9px;
-}
-
-.video a {
-  color: #444444;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 700;
-  display: block;
-  text-align: center;
-  margin-bottom: 30px;
-  width: 190px;
-  letter-spacing: -1px;
+  letter-spacing: 0.31px;
 }
 
 @media @width-tablet {
@@ -94,7 +104,7 @@
 
   .video__title {
     font-size: 20px;
-    width: 250px;
+    width: 600px;
     margin-left: 105px;
     margin-top: 35px;
     order: 2;
@@ -110,19 +120,22 @@
     font-size: 15px;
     line-height: 30px;
     order: 3;
-    letter-spacing: 0.4px;
+    letter-spacing: -0.01px;
     margin: 7px 0 15px 40px;
   }
 
   .video_box {
-    .video_play {
-      top: 185px;
-      left: 278px;
+    min-width: 668px;
+    min-height: 455px;
+  }
 
-      svg {
-        width: 100px;
-        height: 80px;
-      }
+  .video_play {
+    top: 185px;
+    left: 278px;
+
+    svg {
+      width: 100px;
+      height: 80px;
     }
   }
 }
@@ -133,6 +146,13 @@
     width: 1050px;
     margin: 0 auto;
     margin-bottom: 104px;
+
+    a {
+      position: absolute;
+      right: 55px;
+      bottom: 15px;
+      width: 230px;
+    }
   }
 
   .video__title {
@@ -163,22 +183,17 @@
   }
 
   .video_box {
-    .video_play {
-      top: 190px;
-      left: 285px;
-    }
+    min-width: 682px;
+  }
+
+  .video_play {
+    top: 190px;
+    left: 285px;
   }
 
   .video__button {
     position: absolute;
     right: 100px;
     bottom: 100px;
-  }
-
-  .video a {
-    position: absolute;
-    right: 55px;
-    bottom: 15px;
-    width: 230px;
   }
 }

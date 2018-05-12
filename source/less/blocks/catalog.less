@@ -16,11 +16,6 @@
   margin: auto auto 30px;
   padding: 72px 0;
   background-color: @color-grey-light;
-  letter-spacing: 1px;
-}
-
-.catalog__img {
-  background-color: rgb(236, 236, 236);
 }
 
 .catalog__item {
@@ -33,6 +28,12 @@
   &:active {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
+
+  img {
+    background-color: rgb(236, 236, 236);
+    min-width: 260px;
+    min-height: 195px;
+  }
 }
 
 .catalog__item-title {
@@ -41,7 +42,6 @@
   line-height: 24px;
   font-weight: bold;
   margin: 28px 28px 0;
-  letter-spacing: 1px;
 
   &:hover {
     color: fade(@color-black, 60%);
@@ -61,6 +61,11 @@
 
 .catalog__item-info {
   margin-bottom: 17px;
+
+  a {
+    color: @color-black;
+    text-decoration: none;
+  }
 }
 
 .catalog__item-price {
@@ -71,7 +76,7 @@
   margin: 0 28px 25px;
 }
 
-.catalog__item-bascket {
+.catalog__item-price-btn {
   font-size: 0;
   margin-right: 20px;
 
@@ -123,7 +128,7 @@
     }
 
     .catalog__item-description {
-      margin-top: 5px;
+      margin-top: 8px;
       font-size: 15px;
     }
   }
@@ -134,7 +139,6 @@
     margin-bottom: 55px;
     padding: 95px 0 100px;
     position: relative;
-    // padding-bottom: 100px;
 
     &::after {
       content: "";
@@ -143,12 +147,8 @@
       left: 0;
       width: 100%;
       height: 40px;
-      background: url("/img/bg-zigzag-fill.svg") repeat-x bottom;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x bottom;
     }
-  }
-
-  .catalog__item-cost {
-    letter-spacing: 1.5px;
   }
 
   .catalog__item {
@@ -158,8 +158,8 @@
     margin-bottom: 54px;
 
     img {
-      width: 334px;
-      height: 334px;
+      min-width: 334px;
+      min-height: 334px;
     }
 
     div {
@@ -186,7 +186,7 @@
     width: 1050px;
 
     .catalog__item-title {
-      margin-right: 60px;
+      margin-right: 50px;
     }
 
     .catalog__item-price {
@@ -205,7 +205,7 @@
     height: auto;
 
     img {
-      width: 316px;
+      min-width: 316px;
       min-height: 462px;
     }
 

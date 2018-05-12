@@ -1,8 +1,9 @@
 .contacts {
   width: 320px;
   margin: 0 auto;
-  background: @color-white url("/img/bg-zigzag-line.svg") repeat-x;
+  background: @color-white url("../img/bg-zigzag-line.svg") repeat-x;
   padding-top: 48px;
+  background-size: 300px auto;
 }
 
 .contacts__title {
@@ -23,50 +24,58 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+}
 
-  .contacts__item {
-    color: @color-grey;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 30px;
+.contacts__item {
+  color: @color-grey;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
 
-    &--email {
-      margin: 0 0 30px 32px;
-      border-bottom: 1px solid @color-green-light;
+  &--email {
+    margin: 0 0 30px 32px;
+    border-bottom: 1px solid @color-green-light;
 
-      &:hover {
-        color: @color-green-light;
-      }
-
-      &:active {
-        color: rgba(99, 209, 187, 0.3);
-        border-bottom: 1px solid rgba(99, 209, 187, 0.3);
-      }
-
-      & a {
-        color: @color-grey;
-
-        &:hover {
-          color: @change-color-toy;
-        }
-
-        &:active {
-          color: fade(@change-color-toy, 30%);
-        }
-      }
+    &:hover {
+      color: @color-green-light;
     }
 
-    &--address {
-      width: 170px;
-      margin-left: 32px;
-      display: flex;
-      flex-direction: column;
+    &:active {
+      color: rgba(99, 209, 187, 0.3);
+      border-bottom: 1px solid rgba(99, 209, 187, 0.3);
     }
+  }
+
+  &--address {
+    width: 170px;
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__item--email-link {
+  color: @color-grey;
+  text-decoration: none;
+
+  &:hover {
+    color: @change-color-toy;
+  }
+
+  &:active {
+    color: fade(@change-color-toy, 30%);
   }
 }
 
 .contacts-btn {
-  margin: 38px auto;
+  margin: 42px auto 38px;
+}
+
+.contacts__wrapper {
+  .contacts__map {
+    width: 320px;
+    height: 457px;
+  }
 }
 
 @media @width-tablet {
@@ -75,13 +84,13 @@
     margin-top: 75px;
     margin-bottom: 55px;
     padding-top: 48px;
+    background-size: 750px auto;
   }
 
   .contacts__title {
     font-size: 43px;
     line-height: 50px;
     margin: 33px 0 38px 50px;
-    letter-spacing: 1.6px;
 
     .icon-flag {
       display: block;
@@ -97,38 +106,34 @@
   .contacts__items {
     padding-top: 10px;
     margin: 0 50px 55px 50px;
+  }
 
-    .contacts__item {
-      margin-left: 20px;
-      letter-spacing: 1.5px;
+  .contacts__item {
+    &--address {
+      width: 235px;
+      margin-left: 30px;
+    }
 
-      &--address {
-        width: 235px;
-        margin-left: 22px;
-      }
+    &--email {
+      margin-bottom: 60px;
+      letter-spacing: 1px;
+    }
 
-      &--email {
-        margin-bottom: 60px;
-      }
-
-      &--info-email {
-        margin-left: 0;
-      }
-
-      &--info-address {
-        margin-left: 55px;
-      }
+    &--info-address {
+      margin-left: 55px;
     }
   }
 
-  .contacts__wrapper img {
-    width: 100%;
-    height: 457px;
+  .contacts__wrapper {
+    .contacts__map {
+      width: 100%;
+      height: 457px;
+    }
   }
 
   .contacts-btn {
     width: 230px;
-    margin-top: 55px;
+    margin-top: 60px;
   }
 }
 
@@ -136,6 +141,7 @@
   .contacts {
     width: 1050px;
     margin: 0 auto 85px;
+    background-size: 1050px auto;
   }
 
   .contacts__title {
@@ -157,31 +163,31 @@
     flex-wrap: wrap;
     align-items: flex-end;
     margin-top: -150px;
+
+    .contacts__map {
+      width: 525px;
+      height: 457px;
+      position: relative;
+      top: -20px;
+    }
   }
 
   .contacts__items {
     width: 300px;
     margin: 150px 0 150px 175px;
-
-    .contacts__item {
-      margin: 0;
-
-      &--address {
-        width: 222px;
-        margin-left: 23px;
-      }
-
-      &--email {
-        margin: 0 0 30px 23px;
-      }
-    }
   }
 
-  .contacts__wrapper img {
-    width: 525px;
-    height: 457px;
-    position: relative;
-    top: -20px;
+  .contacts__item {
+    margin: 0;
+
+    &--address {
+      width: 222px;
+      margin-left: 30px;
+    }
+
+    &--email {
+      margin: 0 0 30px 30px;
+    }
   }
 
   .contacts-btn {
